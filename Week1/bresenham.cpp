@@ -15,7 +15,7 @@ void display()
     glMatrixMode( GL_PROJECTION );
     glLoadIdentity();
     gluOrtho2D( -500, 500.0, -500.0,500.0 );
-    int x1 = 0, y1 = 0, x2 = 20, y2 = 20;
+    int x1 = 0, y1 = 0, x2 = 0, y2 = 20;
 
     int dx = x2 - x1;
     int dy = y2- y1;
@@ -60,6 +60,7 @@ void display()
         fraction_increment = 2*dx;
         while(y1 <= y2)
         {
+            y1 += stepx;
             if(fraction >= 0) 
             {
                 x1 += stepx;
